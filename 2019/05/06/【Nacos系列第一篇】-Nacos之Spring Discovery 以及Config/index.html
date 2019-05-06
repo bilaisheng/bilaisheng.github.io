@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>No title | Welecome to bilaisheng&#39;s blog!</title>
+    <title>【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config | Welecome to bilaisheng&#39;s blog!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content>
@@ -146,7 +146,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span></span>
+            <span>【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config</span>
             
         </div>
         
@@ -159,7 +159,7 @@
 <header class="content-header post-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title"></h1>
+        <h1 class="title">【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config</h1>
         <h5 class="subtitle">
             
                 <time datetime="2019-05-06T02:37:16.104Z" itemprop="datePublished" class="page-time">
@@ -192,7 +192,7 @@
 <div class="container body-wrap">
     <article id="post-【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config" class="post-article article-type-post" itemprop="blogPost">
     <div class="post-card">
-        <h1 class="post-card-title"></h1>
+        <h1 class="post-card-title">【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config</h1>
         <div class="post-meta">
             <time class="post-time" title="2019-05-06 10:37:16" datetime="2019-05-06T02:37:16.104Z" itemprop="datePublished">2019-05-06</time>
 
@@ -233,7 +233,7 @@
 </ul>
 </blockquote>
 <h3 id="Nacos架构图"><a href="#Nacos架构图" class="headerlink" title="Nacos架构图"></a>Nacos架构图</h3><figure class="image-box">
-                <a rel="href=" https: img-blog.csdnimg.cn 20190113204056587.jpg?x-oss-process="image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70""" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113204056587.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" title class></a>
+                <a rel="【Nacos系列第一篇】-Nacos之Spring" discovery 以及config href="https://img-blog.csdnimg.cn/20190113204056587.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113204056587.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" title class></a>
                 <p>在这里插入图片描述</p>
             </figure>
 <h3 id="2、准备工作"><a href="#2、准备工作" class="headerlink" title="2、准备工作"></a>2、准备工作</h3><p>工具：IDEA2018.3  、JDK： 1.8、Maven:3.5（通用配置。后续不在提及此部分。均已此版本演示）</p>
@@ -244,7 +244,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip nacos-server-$version.zip 或者 tar -xvf nacos-server-$version.tar.gz</span><br></pre></td></tr></table></figure>
 <p>下载后启动Nacos。Nacos默认启动端口为8848，意为珠穆朗玛峰高度。如启动有端口冲突，请自行调整端口。</p>
 <h3 id="3、工程结构"><a href="#3、工程结构" class="headerlink" title="3、工程结构"></a>3、工程结构</h3><p>上面说了那么多，现在先整理来看一下我们的工程结构<br><figure class="image-box">
-                <a rel="href=" https: img-blog.csdnimg.cn 20190113212729201.png?x-oss-process="image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70""" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113212729201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" title class></a>
+                <a rel="【Nacos系列第一篇】-Nacos之Spring" discovery 以及config href="https://img-blog.csdnimg.cn/20190113212729201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113212729201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzg3ODc5OTU3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" title class></a>
                 <p>在这里插入图片描述</p>
             </figure></p>
 <p>附上关键部分代码。</p>
@@ -343,7 +343,7 @@
 <h4 id="本工程pom-xml"><a href="#本工程pom-xml" class="headerlink" title="本工程pom.xml"></a>本工程pom.xml</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-spring-examples<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.bilaisheng.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-spring-discvoery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba.nacos/nacos-spring-context --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.nacos<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="页面请求"><a href="#页面请求" class="headerlink" title="页面请求"></a>页面请求</h4><p>页面请求同普通Spring相同，启动后根据<a href="http://ip:端口/controller/xxx。" target="_blank" rel="noopener">http://ip:端口/controller/xxx。</a></p>
 <h4 id="喜欢就关注我吧"><a href="#喜欢就关注我吧" class="headerlink" title="喜欢就关注我吧"></a>喜欢就关注我吧</h4><figure class="image-box">
-                <a rel="href=" https: img-blog.csdnimg.cn 20190113204135291.gif"" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113204135291.gif" alt="在这里插入图片描述" title class></a>
+                <a rel="【Nacos系列第一篇】-Nacos之Spring" discovery 以及config href="https://img-blog.csdnimg.cn/20190113204135291.gif" title="在这里插入图片描述" data-fancybox="images"><img src="https://img-blog.csdnimg.cn/20190113204135291.gif" alt="在这里插入图片描述" title class></a>
                 <p>在这里插入图片描述</p>
             </figure>
         </div>
@@ -352,7 +352,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-05-06T02:38:03.197Z" itemprop="dateUpdated">2019-05-06 10:38:03</time>
+    最后更新时间：<time datetime="2019-05-06T02:40:37.053Z" itemprop="dateUpdated">2019-05-06 10:40:37</time>
 </span><br>
 
 
@@ -384,7 +384,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=Welecome to bilaisheng's blog!&pic=http://bilaisheng.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&pic=http://bilaisheng.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -396,7 +396,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=Welecome to bilaisheng's blog!&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -408,7 +408,7 @@
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Welecome to bilaisheng's blog!&url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&via=http://bilaisheng.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&via=http://bilaisheng.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -552,7 +552,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《No title》 — Welecome to bilaisheng's blog!&pic=http://bilaisheng.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&pic=http://bilaisheng.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -564,7 +564,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《No title》 — Welecome to bilaisheng's blog!&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&title=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -576,7 +576,7 @@
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — Welecome to bilaisheng's blog!&url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&via=http://bilaisheng.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config》 — Welecome to bilaisheng's blog!&url=http://bilaisheng.com/2019/05/06/【Nacos系列第一篇】-Nacos之Spring Discovery 以及Config/&via=http://bilaisheng.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
